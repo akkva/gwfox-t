@@ -8,7 +8,7 @@
 
 ## How to install
 
-- [Download the theme as a zip file](https://github.com/akkva/gwfox-t/archive/refs/heads/main.zip)
+- [Download the theme as a zip file](https://github.com/akkva/GWfox-T/archive/refs/heads/main.zip)
 - Open your profile directory
   - go to `about:support`
   - click the **Open Folder** button next to your **Profile directory**
