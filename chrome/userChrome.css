@@ -51,8 +51,8 @@
   --link-color-hover: light-dark(#0075dd, #006bdc) !important;
   --link-color-active: light-dark(#005ebb, #0055bc) !important;
   --toolbar-field-focus-background-color: light-dark(rgba(155, 155, 155, .25), rgba(195, 195, 195, .25)) !important;
-  --urlbarView-result-button-hover-color: light-dark(rgba(0, 0, 0, .8), rgba(255, 255, 255, .8)) !important;
-  --urlbarView-result-button-hover-background-color: light-dark(rgba(155, 155, 155, .5), rgba(195, 195, 195, .5)) !important;
+  --urlbarView-result-button-hover-color: rgba(255, 255, 255, .8) !important;
+  --urlbarView-result-button-hover-background-color: rgba(195, 195, 195, .2) !important;
   --toolbarbutton-icon-fill-attention: light-dark(#007aff, #1280fd) !important;
   --arrowpanel-background: light-dark(#fff, #383838) !important;
   --arrowpanel-border-radius: 12px !important;
@@ -1413,10 +1413,6 @@ tab-group[previewpanelactive] & {
 tab-split-view-wrapper {
   margin-inline-start: 7.5px !important;
   margin-inline-end: 8px !important;
-@media (-moz-platform: linux) {
-  margin-inline-start: 10px !important;
-  margin-inline-end: 11px !important;
-}
   padding: 0 !important;
   background-color: transparent !important;
 #tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
@@ -2353,14 +2349,12 @@ sidebar-tab-row {
 :where(#toolbar-context-menu > menuitem:not(.menuitem-iconic))::before,
 :where(#contentAreaContextMenu > menu:not(.menu-iconic))::before,
 :where(#contentAreaContextMenu > menuitem:not(.menuitem-iconic))::before {
-  display: flex;
   width: 16px;
   height: 16px;
-  align-items: center;
-  justify-content: center;
   padding-inline-end: 8px;
-  -moz-context-properties: fill;
+  content: "" !important;
   visibility: visible !important;
+  -moz-context-properties: fill;
   fill: currentColor;
   scale: .75;
 }
@@ -2529,6 +2523,7 @@ sidebar-tab-row {
   content: url("chrome://devtools/skin/images/command-screenshot.svg") !important;
 }
 
+#context_sendTabToDevice::before,
 #context-sendpagetodevice::before,
 #context-sendlinktodevice::before {
   content: url("chrome://browser/skin/synced-tabs.svg") !important;
@@ -2690,10 +2685,6 @@ sidebar-tab-row {
 #context_duplicateTab::before,
 #context_duplicateTabs::before {
   content: url("chrome://devtools/skin/images/command-always-on-top-window.svg") !important;
-}
-
-#context_sendTabToDevice::before {
-  content: url("chrome://browser/skin/synced-tabs.svg") !important;
 }
 
 #context_selectAllTabs::before {
@@ -3075,15 +3066,9 @@ tab-group > .tabbrowser-tab,
 tab-split-view-wrapper {
 .tab-background {
   margin-inline-start: 9px !important;
-@media (-moz-platform: linux) {
-  margin-inline-start: 12px !important;
-}
 }
 .tab-close-button {
   margin-inline-start: 17px !important;
-@media (-moz-platform: linux) {
-  margin-inline-start: 20px !important;
-}
 }
 }
 }
