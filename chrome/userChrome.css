@@ -2697,6 +2697,16 @@ sidebar-tab-row {
   content: url("chrome://browser/skin/tab.svg") !important;
 }
 
+#context_fullscreenAutohide::before,
+#toolbar-context-full-screen-autohide::before {
+  content: url("chrome://global/skin/icons/arrows-updown.svg") !important;
+}
+
+#context_fullscreenExit::before,
+#toolbar-context-full-screen-exit::before {
+  content: url("chrome://browser/skin/fullscreen-exit.svg") !important;
+}
+
 #context_duplicateTab::before,
 #context_duplicateTabs::before {
   content: url("chrome://devtools/skin/images/command-always-on-top-window.svg") !important;
